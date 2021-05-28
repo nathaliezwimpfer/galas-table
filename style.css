@@ -1,6 +1,6 @@
 html {
   font-size: 24px;
-  font-family: "Roboto";
+  font-family: "mrs-eaves", sans-serif;
   color: black;
   font-weight: 300;
 }
@@ -43,6 +43,32 @@ footer {
   border-bottom: 5px solid black;
 }
 
+.eye-button-container {
+  position: absolute;
+  z-index: 5;
+}
+
+#eye-button {
+  cursor: pointer;
+}
+
+#quotes {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+}
+
+#overlay {
+  background-color: hsla(100, 50%, 100%, 0.95);
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+  z-index: 3;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -59,8 +85,13 @@ section {
   width: 50%;
   margin: 0px 40px 40px 40px;
 }
+.we-paragraph-4 {
+  width: 50%;
+  margin: 0px 40px 40px 40px;
+  font-weight: 600;
+}
 
-.eye-image-1 {
+/*.eye-image-1 {
   background-image: url("https://i.ibb.co/TMJZnJ4/Eye1-1.png");
   height: 65%;
   width: 10%;
@@ -99,7 +130,7 @@ section {
   background-repeat: no-repeat;
   background-size: 90px;
 }
-
+*/
 @media only screen and (max-width: 900px) {
   footer {
     position: relative;

@@ -1,6 +1,7 @@
+/* General styling that applies to all pages*/
 html {
   font-size: 24px;
-  font-family: "mrs-eaves", sans-serif;
+  font-family: "mrs-eaves", Baskerville, sans-serif;
   color: black;
   font-weight: 300;
 }
@@ -19,7 +20,7 @@ main {
    background-repeat: no-repeat;
 }
 
-footer {
+.fixed-footer {
   display: flex;
   justify-content: space-between;
   margin: 0px 50px 40px 50px;
@@ -27,22 +28,25 @@ footer {
   bottom: 0;
 }
 
-.contact {
-    position: fixed;
-    right: 50px;
-}
-
 .nav-item {
   color: black;
   text-decoration: none;
   padding: 5px 0px;
-  margin: 0px 5px 20px 5px;
+  margin: 0px 10px 20px 10px;
 }
 
 .nav-item:hover {
   border-bottom: 5px solid black;
 }
+.nav-item-visible {
+  border-bottom: 5px solid black;
+  color: black;
+  text-decoration: none;
+  padding: 5px 0px;
+  margin: 0px 10px 20px 10px;
+}
 
+/*Vision page*/
 .eye-button-container {
   position: absolute;
   z-index: 5;
@@ -50,14 +54,51 @@ footer {
 
 #eye-button {
   cursor: pointer;
+  width: 120px;
+  border: none;
+  padding: 0px;
+  position: fixed;
+  right: 230px;
+  top: 105px;
+}
+
+@keyframes eye-animation {
+  0%   {right:230px; top:105px;}
+  17%  {right:229px; top:106px;}
+  34%  {right:229px; top:107px;}
+  51%  {right:230px; top:108px;}
+  68%  {right:231px; top:107px;}
+  83% {right:231px; top:106px;}
+  100% {right:230px; top:105px;}
+  /*40%  {right:222px; top:115px;}
+  50%  {right:200px; top:200px;}
+  60%  {right:222px; top:215px;}
+  80%  {right:225px; top:110px;}
+  */
+}
+
+#eye-button {
+   animation: eye-animation 3s infinite;
+   animation-timing-function: linear;
 }
 
 #quotes {
   display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 25%;
+  right: 35%;
   z-index: 4;
+}
+
+#quoteParagraph {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+#attributionParagraph {
+  color: grey;
+  font-size: 1rem;
 }
 
 #overlay {
@@ -90,6 +131,97 @@ section {
   margin: 0px 40px 40px 40px;
   font-weight: 600;
 }
+
+p {
+  max-width: 500px;
+}
+
+/*What we Do page*/
+.main-whatwedo {
+  background-image: none;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.whatwedo-paragraph {
+  margin-top: 140px;
+}
+
+.div-line {
+  max-width: 130px;
+  height: 1px;
+  background-color: grey;
+  padding-left: 120px;
+  margin-top: 140px;
+}
+
+.blank-div {
+  height: 40px;
+}
+
+h3 {
+  align-items: left;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+.whatwedo-sub-paragraph {
+
+}
+
+.bolded-p-text {
+  font-weight: 600;
+}
+
+.whatwedo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.whatwedo-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 150px 50px 0px 50px;
+  position: relative;
+}
+
+.home-vision-container {
+
+}
+
+/*Contact page*/
+
+.main-contact {
+  background-image: url("https://i.ibb.co/N2P7mjx/Untitled-Artwork.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  padding-top: 20px;
+}
+
+.email {
+  font-weight: 600;
+}
+
+.contact-info-container {
+  background-color: white;
+}
+.contact {
+  position: fixed;
+  right: 50px;
+}
+
+.contact-whatwedo {
+  margin-right: 50px;
+}
+
+
+
 
 /*.eye-image-1 {
   background-image: url("https://i.ibb.co/TMJZnJ4/Eye1-1.png");

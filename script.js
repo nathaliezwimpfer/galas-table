@@ -2,6 +2,8 @@ const eyeButton = document.getElementById('eye-button');
 const overlay = document.getElementById('overlay');
 const quotes = document.getElementById('quotes');
 let quote = document.getElementById('quote');
+let quoteParagraph = document.getElementById('quoteParagraph');
+let attributionParagraph = document.getElementById('attributionParagraph');
 let overlayShowing = false; // by default, this is false
 
 rotateEyeButtonImages();
@@ -25,42 +27,48 @@ function displayOverlay() {
 }
 
 function displayRandomQuote() {
-  let randomQuote = getRandomQuote();
-  addRandomQuoteToQuotesContainer(randomQuote);
+  let randomQuoteAttributionPair = getRandomQuoteAttributionPair();
+  addRandomQuoteToQuotesContainer(randomQuoteAttributionPair);
   quotes.style.display = 'block';
+  quotes.style.fontSize = '36px';
 }
 
 function hideOverlay() {
   overlay.style.display = 'none';
 }
 
-function getRandomQuote() {
-  let randomQuote = '';
-  const listOfQuotes = [
-    'The greatest glory in living lies not in never falling, but in rising every time we fall.',
-    'The way to get started is to quit talking and begin doing.',
-    `Your time is limited, so don't waste it living someone else's life.`,
-    'If life were predictable it would cease to be life, and be without flavor.',
-  ];
+function getRandomQuoteAttributionPair() {
+  const quoteLibrary = {
+    quoteOne: [`"If design has become the poster child of and a primary tool for problem solving, I propose that art, characterized by open-ended inquiry driven by imagination and creativity, is an essential and missing ingredient in our quest to remake our world to be a more equitable, just and sustainable place."`, `— Robert Ransick, VP of Academic Affairs at the Minneapolis College of Art and Design`],
+    quoteTwo: [`"Both artists and entrepreneurs function as our society’s scouts, forerunners who are sensitive to changing conditions, on the lookout for broader perspectives and new opportunities, who report back to the rest of us about the emerging landscape ahead. Uniting artistic and entrepreneurial visions unlocks a powerful potential for responding to community needs in unexpected, creative ways."`, `— Yo-Yo Ma, Cellist`],
+    quoteThree: [`"Artists possess a broad toolkit of methodologies and practices that can help potential collaborators in every sector approach problems in new ways, engage audiences and customers more deeply, and find connections and adjacencies between seemingly unrelated ideas...Artists are imagination partners. Always ready to pose the “what if” questions that blow up our old thinking and lead to radically new ideas."`, `— Steven J Tepper, Dean, Arizona State University`],
+  };
 
-  let randomIndex = Math.floor(Math.random() * listOfQuotes.length);
-  randomQuote = listOfQuotes[randomIndex];
-  return randomQuote;
+  const arrayOfKeys = Object.keys(quoteLibrary);
+  const randomQuoteAttributionPair = quoteLibrary[arrayOfKeys[ arrayOfKeys.length * Math.random() << 0]];
+  return randomQuoteAttributionPair;
 }
 
-function addRandomQuoteToQuotesContainer(randomQuote) {
-  let newPText = document.createTextNode(randomQuote);
-  quote.appendChild(newPText);
+function addRandomQuoteToQuotesContainer(randomQuoteAttributionPair) {
+  let newPQuoteText = document.createTextNode(randomQuoteAttributionPair[0]);
+  let newPAttributionText = document.createTextNode(randomQuoteAttributionPair[1]);
+  quoteParagraph.appendChild(newPQuoteText);
+  attributionParagraph.appendChild(newPAttributionText);
 }
 
 function hideQuote() {
-  quote.remove();
+  quoteParagraph.remove();
+  attributionParagraph.remove();
   quotes.style.display = 'none';
 
   let newQuoteEl = document.createElement('p');
-  newQuoteEl.setAttribute('id', 'quote');
+  let newAttributionEl = document.createElement('p');
+  newQuoteEl.setAttribute('id', 'quoteParagraph');
+  newAttributionEl.setAttribute('id', 'attributionParagraph');
   quotes.appendChild(newQuoteEl);
-  quote = document.getElementById('quote');
+  quotes.appendChild(newAttributionEl);
+  quoteParagraph = document.getElementById('quoteParagraph');
+  attributionParagraph = document.getElementById('attributionParagraph');
 }
 
 function rotateEyeButtonImages() {

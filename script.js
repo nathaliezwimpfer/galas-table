@@ -72,7 +72,21 @@ function hideQuote() {
 }
 
 function rotateEyeButtonImages() {
+  const imageLinks = [
+    'https://i.ibb.co/5MQTX81/Eye1.png',
+    'https://i.ibb.co/VLDLLh6/Eye2.png',
+    'https://i.ibb.co/hdQF94W/Eye3.png',
+    'https://i.ibb.co/vPvW3tK/Eye4.png',
+  ];
+  let eyeImage = document.getElementById('eye-image');
+  let linkIndex = 0;
+  eyeImage.src = imageLinks[linkIndex];
   setInterval(function() {
-    console.log('you rotated the eyes!'); // TODO THIS COMMIT: remove this
-  }, 5000);
+    if (linkIndex === 3) {
+      linkIndex = 0;
+    } else {
+      linkIndex = linkIndex + 1;
+    }
+    eyeImage.src = imageLinks[linkIndex];
+  }, 4000);
 }

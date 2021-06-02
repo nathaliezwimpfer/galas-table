@@ -83,11 +83,16 @@ main {
 }
 
 #quotes {
+  cursor: pointer;
   display: none;
   position: absolute;
-  top: 25%;
-  right: 35%;
+  top: 23%;
+  right: 0%;
   z-index: 4;
+  background-color: white;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 #quoteParagraph {
@@ -96,12 +101,18 @@ main {
   font-style: italic;
 }
 
+.quote-paragraph {
+  max-width: 700px;
+
+}
+
 #attributionParagraph {
   color: grey;
   font-size: 1rem;
 }
 
 #overlay {
+  cursor: pointer;
   background-color: hsla(100, 50%, 100%, 0.90);
   height: 100%;
   width: 100%;
@@ -197,11 +208,12 @@ h4 {
 /*Contact page*/
 
 .main-contact {
-  background-image: url("https://i.ibb.co/N2P7mjx/Untitled-Artwork.png");
+  /*background-image: url("https://i.ibb.co/N2P7mjx/Untitled-Artwork.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 90vw;
-  padding-top: 20px;
+  padding-top: 20px;*/
+  background-image: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,12 +222,10 @@ h4 {
 .email {
   font-weight: 600;
   padding-bottom: 50px;
+  background-color: white;
 }
 
 .contact-info-container {
-  background-color: white;
-  width: 40%;
-  height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,8 +239,41 @@ h4 {
   margin-right: 50px;
 }
 
-
-
+.eye-collection-1 {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+}
+.eye-collection-2 {
+  position: fixed;
+  top: 45%;
+  right: 1%;
+}
+.eye-collection-3 {
+  position: fixed;
+  top: 1%;
+  right: 5%;
+}
+.eye-collection-4 {
+  position: fixed;
+  top: 25%;
+  left: 24%;
+}
+.eye-collection-5 {
+  position: fixed;
+  top: 40%;
+  left: 10%;
+}
+.eye-collection-6 {
+  position: fixed;
+  top: 50%;
+  left: 55%;
+}
+.eye-collection-7 {
+  position: fixed;
+  top: 50%;
+  left: 55%;
+}
 
 /*.eye-image-1 {
   background-image: url("https://i.ibb.co/TMJZnJ4/Eye1-1.png");

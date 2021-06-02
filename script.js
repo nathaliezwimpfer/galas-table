@@ -1,5 +1,6 @@
 const eyeButton = document.getElementById('eye-button');
 const overlay = document.getElementById('overlay');
+const visionBody = document.getElementById('vision-body');
 const quotes = document.getElementById('quotes');
 let quote = document.getElementById('quote');
 let quoteParagraph = document.getElementById('quoteParagraph');
@@ -21,6 +22,28 @@ function toggleQuotes() {
     overlayShowing = false;
   }
 }
+
+overlay.addEventListener('click', hideOverlayAndQuote);
+quotes.addEventListener('click', hideOverlayAndQuote);
+
+function hideOverlayAndQuote() {
+  if (overlayShowing) {
+    hideOverlay();
+    hideQuote();
+    overlayShowing = false;
+  }
+}
+
+/*visionBody.addEventListener('click', hideOverlayAndQuote);
+
+function hideOverlayAndQuote() {
+  if (overlayShowing) {
+    hideOverlay();
+    hideQuote();
+    overlayShowing = false;
+  }
+}
+*/
 
 function displayOverlay() {
   overlay.style.display = 'block';

@@ -20,36 +20,51 @@ main {
    background-repeat: no-repeat;
 }
 
-.fixed-footer {
+.nav-container {
   display: flex;
-  justify-content: space-between;
-  margin: 0px 50px 40px 50px;
-  position: fixed;
-  bottom: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 41px;
+  width: 150px;
 }
 
 .nav-item {
   color: black;
   text-decoration: none;
-  padding: 5px 0px;
-  margin: 0px 10px 20px 10px;
+  margin: 0px 10px 0px 10px;
+  padding: 0px;
 }
 
 .nav-item:hover {
-  border-bottom: 5px solid black;
+  font-weight: 600;
 }
 .nav-item-visible {
-  border-bottom: 5px solid black;
   color: black;
+  font-weight: 600;
   text-decoration: none;
   padding: 5px 0px;
-  margin: 0px 10px 20px 10px;
+  margin: 0px 10px 0px 10px;
+}
+
+.small-logo {
+  width: 250px;
 }
 
 /*Vision page*/
+.vision-main {
+  background-image: none;
+  display: flex;
+  height: 70%;
+  margin-top: 70px;
+}
+
+section {
+  margin-left: 25%;
+}
+
 .eye-button-container {
-  position: absolute;
-  z-index: 5;
+  display: flex;
+  margin-top: 40px;
 }
 
 #eye-button {
@@ -57,9 +72,7 @@ main {
   width: 120px;
   border: none;
   padding: 0px;
-  position: fixed;
-  right: 230px;
-  top: 105px;
+  margin: 0 auto;
 }
 
 @keyframes eye-animation {
@@ -100,10 +113,6 @@ main {
   font-style: italic;
 }
 
-.quote-paragraph {
-  /*max-width: 700px;*/
-
-}
 
 #attributionParagraph {
   color: grey;
@@ -119,30 +128,21 @@ main {
   z-index: 3;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-}
-
 .eye-text-container {
   display: flex;
   justify-content: center;
 }
 
 .we-paragraph {
-  width: 50%;
   margin: 0px 40px 40px 40px;
 }
 .we-paragraph-4 {
-  width: 50%;
   margin: 0px 40px 40px 40px;
   font-weight: 600;
 }
 
 p {
-  max-width: 500px;
+  max-width: 600px;
 }
 
 /*What we Do page*/
@@ -179,9 +179,6 @@ h4 {
   font-size: 24px;
 }
 
-.whatwedo-sub-paragraph {
-
-}
 
 .bolded-p-text {
   font-weight: 600;

@@ -110,5 +110,5 @@ function rotateEyeButtonImages() {
       linkIndex = linkIndex + 1;
     }
     eyeImage.src = imageLinks[linkIndex];
-  }, 4000);
+  }, 5000);
 }

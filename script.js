@@ -9,6 +9,7 @@ let overlayShowing = false; // by default, this is false
 
 rotateEyeButtonImages();
 
+/*
 eyeButton.addEventListener('click', toggleQuotes);
 
 function toggleQuotes() {
@@ -42,7 +43,7 @@ function hideOverlayAndQuote() {
     overlayShowing = false;
   }
 }
-*/
+
 
 function displayOverlay() {
   overlay.style.display = 'block';
@@ -92,8 +93,30 @@ function hideQuote() {
   quoteParagraph = document.getElementById('quoteParagraph');
   attributionParagraph = document.getElementById('attributionParagraph');
 }
+*/
 
 function rotateEyeButtonImages() {
+  const imageLinks = [
+    'https://i.ibb.co/5MQTX81/Eye1.png',
+    'https://i.ibb.co/VLDLLh6/Eye2.png',
+    'https://i.ibb.co/hdQF94W/Eye3.png',
+    'https://i.ibb.co/vPvW3tK/Eye4.png',
+  ];
+  let eyeImage = document.getElementById('eye-image');
+  let linkIndex = 0;
+  eyeImage.src = imageLinks[linkIndex];
+  setInterval(function() {
+    if (linkIndex === 3) {
+      linkIndex = 0;
+    } else {
+      linkIndex = linkIndex + 1;
+    }
+    eyeImage.src = imageLinks[linkIndex];
+  }, 5000);
+}
+
+
+function rotateQuotes() {
   const imageLinks = [
     'https://i.ibb.co/5MQTX81/Eye1.png',
     'https://i.ibb.co/VLDLLh6/Eye2.png',

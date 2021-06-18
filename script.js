@@ -24,7 +24,6 @@ function toggleQuotes() {
 }
 
 overlay.addEventListener('click', hideOverlayAndQuote);
-quotes.addEventListener('click', hideOverlayAndQuote);
 
 function hideOverlayAndQuote() {
   if (overlayShowing) {

@@ -92,11 +92,17 @@ function getNextQuoteAttributionPair(quoteLibrary) {
 }
 
 function removePreviousQuoteFromContainer() {
+  if (!quoteParagraph) {
+    return;
+  }
   quoteParagraph.innerHTML = '';
   attributionParagraph.innerHTML = '';
 }
 
 function addNextQuoteToQuotesContainer(nextQuoteAttributionPair) {
+  if (!quoteParagraph) {
+    return;
+  }
   let newPQuoteText = document.createTextNode(nextQuoteAttributionPair[0]);
   let newPAttributionText = document.createTextNode(nextQuoteAttributionPair[1]);
   quoteParagraph.appendChild(newPQuoteText);

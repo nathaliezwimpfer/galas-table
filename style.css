@@ -12,6 +12,7 @@ body {
   width: 1000px;
   margin: 0 auto;
 }
+
 header {
   margin-top: 35px;
 }
@@ -26,11 +27,15 @@ main {
    background-repeat: no-repeat;
 }
 
+section {
+  margin-left: 10%;
+}
+
 .nav-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 165px;
+  width: 170px;
 }
 
 .nav-item {
@@ -41,23 +46,62 @@ main {
   line-height: 1.2;
 }
 
-.nav-item:hover {
-  font-weight: 600;
-}
 .nav-item-visible {
   color: black;
   font-weight: 600;
   text-decoration: none;
-  padding: 5px 0px;
   margin: 0px 10px 0px 10px;
+}
+
+.nav-item:hover {
+  font-weight: 600;
 }
 
 .small-logo {
   width: 220px;
   margin-left:-40px;
+  cursor: pointer;
 }
 /*Home page*/
+#quoteParagraph {
+  margin-bottom: 30px;
+}
 
+.eye-button-container {
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  animation: eye-animation 5s infinite;
+  animation-timing-function: linear;
+}
+
+#eye-button {
+  cursor: pointer;
+  width: 80px;
+  border: none;
+  padding: 0px;
+  margin: 0 auto;
+
+}
+#eye-button-no-click {
+  width: 80px;
+  border: none;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+#eye-image {
+  width: 80px;
+}
+
+@keyframes eye-animation {
+  0%   {margin-top: 80px; margin-left: 0px;}
+  20%  {margin-top: 80.5px; margin-left: 0.5px;}
+  40%  {margin-top: 80.5px; margin-left: 1px;}
+  60%  {margin-top: 80px; margin-left: 1.5px;}
+  80%  {margin-top: 79.5px; margin-left: 1px;}
+  100% {margin-top: 79.5px; margin-left: 0.5px;}
+}
 
 /*Vision page*/
 .vision-main {
@@ -67,79 +111,7 @@ main {
   margin-top: 25px;
 }
 
-section {
-  margin-left: 10%;
-  margin-top: 7px;
-}
-
-.eye-button-container {
-  display: flex;
-  margin-top: 80px;
-  margin-bottom: 100px;
-}
-
-#eye-button {
-  cursor: pointer;
-  width: 80px;
-  border: none;
-  padding: 0px;
-  margin: 0 auto;
-}
-
-@keyframes eye-animation {
-  0%   {right:230px; top:105px;}
-  17%  {right:229px; top:106px;}
-  34%  {right:229px; top:107px;}
-  51%  {right:230px; top:108px;}
-  68%  {right:231px; top:107px;}
-  83% {right:231px; top:106px;}
-  100% {right:230px; top:105px;}
-  /*40%  {right:222px; top:115px;}
-  50%  {right:200px; top:200px;}
-  60%  {right:222px; top:215px;}
-  80%  {right:225px; top:110px;}
-  */
-}
-
-#eye-button {
-   animation: eye-animation 3s infinite;
-   animation-timing-function: linear;
-}
-
-#quotes {
-  display: none;
-  position: absolute;
-  top: 23%;
-  right: 0%;
-  z-index: 4;
-  background-color: white;
-  padding: 50px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  border-radius: 10px 0px 0px 10px;
-}
-
-#quoteParagraph {
-  font-size: 1.4rem;
-  margin-bottom: 30px;
-  font-style: italic;
-}
-
-#attributionParagraph {
-  color: grey;
-  font-size: 1rem;
-}
-
-#overlay {
-  background-color: hsla(100, 50%, 100%, 0.90);
-  height: 100%;
-  width: 100%;
-  display: none;
-  position: absolute;
-  z-index: 3;
-}
-
 .text-container {
-  margin-left: 10%;
   margin-top: 7px;
 }
 
@@ -156,7 +128,6 @@ p {
 }
 
 /*What We Do page*/
-
 .sub-page-main {
   background-image: none;
   display: flex;
@@ -164,28 +135,33 @@ p {
   margin-top: 25px;
 }
 
-h3 {
-  align-items: left;
-  margin-top: -15px;
-  font-size: 24px;
-}
-
 h4 {
   font-size: 24px;
 }
 
+/*Who we are*/
 .bolded-p-text {
   font-weight: 600;
 }
 
-/*Contact page*/
-.blank-div {
-  height: 30px;
+h3 {
+  align-items: left;
+  font-size: 24px;
 }
 
 /*News page*/
-/*Contact page*/
+.news-blank-div {
+  height: 500px;
+}
 
+.coming-soon {
+  margin-top: -7px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: 600px;
+}
+
+/*Contact page*/
 .main-contact {
   background-image: none;
   display: flex;
@@ -195,58 +171,28 @@ h4 {
 
 .email {
   font-weight: 600;
-  padding-bottom: 50px;
-  background-color: white;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.social-container {
+  display: flex;
+}
+
+.social-image {
+  width: 35px;
+  padding: 5px;
 }
 
 .contact-info-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-.contact {
-  position: fixed;
-  right: 50px;
-}
 
-.contact-whatwedo {
-  margin-right: 50px;
-}
-
-.eye-collection-1 {
-  position: fixed;
-  top: 1%;
-  left: 1%;
-}
-.eye-collection-2 {
-  position: fixed;
-  top: 45%;
-  right: 1%;
-}
-.eye-collection-3 {
-  position: fixed;
-  top: 1%;
-  right: 5%;
-}
-.eye-collection-4 {
-  position: fixed;
-  top: 25%;
-  left: 24%;
-}
-.eye-collection-5 {
-  position: fixed;
-  top: 40%;
-  left: 10%;
-}
-.eye-collection-6 {
-  position: fixed;
-  top: 50%;
-  left: 55%;
-}
-.eye-collection-7 {
-  position: fixed;
-  top: 7%;
-  left: 30%;
+.blank-div {
+  height: 30px;
 }
 
 /* Media Query */

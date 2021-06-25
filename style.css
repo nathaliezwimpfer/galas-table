@@ -13,6 +13,14 @@ body {
   margin: 0 auto;
 }
 
+.nav-container-hamburger {
+  display: none;
+}
+
+#overlay {
+  display: none;
+}
+
 header {
   margin-top: 35px;
   display: flex;
@@ -33,10 +41,15 @@ section {
   margin-left: 10%;
 }
 
+.hamburger-icon {
+  display: none;
+}
+
 .nav-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: 7px;
   width: 170px;
 }
 
@@ -60,13 +73,14 @@ section {
 }
 
 .small-logo {
-  width: 170px;
-  margin: 30px 0px 30px 160px;
+  width: 190px;
+  margin: 30px 0px 30px 150px;
   cursor: pointer;
 }
 /*Home page*/
 #quoteParagraph {
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .eye-button-container {
@@ -201,72 +215,56 @@ h3 {
   height: 30px;
 }
 
+.blank-div-contact {
+  height: 100px;
+}
+
+#overlay {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+  z-index: 3;
+}
+
 /* Media Query */
-@media only screen and (max-width: 900px) {
-  footer {
-    position: relative;
+
+
+@media only screen and (max-width: 930px) {
+  .nav-container-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 2rem;
   }
 
-  .contact {
+  .hamburger-icon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 30px 0px;
     position: relative;
+    left: -188px;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  body {
+    width: auto;
   }
 
   section {
-    height: auto;
+    margin-left: 0px;
   }
-  .eye-image-1 {
-    height: 36px;
-    width: 10%;
-    margin-top: 75px;
-  }
-  .eye-image-2 {
-    height: 30px;
-    width: 10%;
-    margin-top: 75px;
-  }
-  .eye-image-3 {
-    height: 30px;
-    width: 10%;
-    margin-top: 50px;
-  }
-  .eye-image-4 {
-    height: 30px;
-    width: 10%;
-    margin-top: 50px;
-  }
-  .eye-text-container {
-    margin-top: 50px;
-  }
-}
 
-@media only screen and (max-width: 800px) {
-  .eye-text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  main {
+    justify-content: center;
+    margin: 0;
   }
-  .eye-image-1 {
-    height: 36px;
-    width: 100%;
-    margin-bottom: 30px;
-    margin-top: 50px;
+
+  .small-logo {
+    margin: 30px 0px 30px 0px;
   }
-  .eye-image-2 {
-    height: 30px;
-    width: 100%;
-    margin-bottom: 30px;
-    margin-top: 10px;
-  }
-  .eye-image-3 {
-    height: 30px;
-    width: 100%;
-    margin-bottom: 30px;
-    margin-top: 10px;
-  }
-  .eye-image-4 {
-    height: 30px;
-    width: 100%;
-    margin-bottom: 30px;
-    margin-top: 10px;
-  }
-}

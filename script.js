@@ -10,7 +10,7 @@ displayNextQuote();
 
 setInterval(function () {
   displayNextQuote();
-}, 5000);
+}, 18000);
 
 function rotateEyeButtonImages() {
   const imageLinks = [
@@ -107,4 +107,23 @@ function addNextQuoteToQuotesContainer(nextQuoteAttributionPair) {
   let newPAttributionText = document.createTextNode(nextQuoteAttributionPair[1]);
   quoteParagraph.appendChild(newPQuoteText);
   attributionParagraph.appendChild(newPAttributionText);
+}
+
+
+// Toggle Hamburger Nav on Mobile View
+let btn = document.getELementById('button');
+
+btn.addEventListener ('click', toggleNav);
+
+function toggleNav() {
+  if (!overlayShowning) {
+    displayOverlay();
+    displayHamburgerNav();
+    overlayShowing = true;
+  }
+  else {
+    hideOverlay();
+    hideHamburgerNav();
+    overlayShowing = false;
+  }
 }

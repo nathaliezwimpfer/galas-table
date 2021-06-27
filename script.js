@@ -12,6 +12,7 @@ let hamburgerIcon = document.getElementById('hamburger-icon');
 
 rotateEyeButtonImages();
 displayNextQuote();
+console.log('test');
 toggleNav();
 
 setInterval(function () {
@@ -27,15 +28,18 @@ function rotateEyeButtonImages() {
   ];
   let eyeImage = document.getElementById('eye-image');
   let linkIndex = 0;
-  eyeImage.src = imageLinks[linkIndex];
-  setInterval(function() {
-    if (linkIndex === 3) {
-      linkIndex = 0;
-    } else {
-      linkIndex = linkIndex + 1;
-    }
+
+  if (eyeImage) {
     eyeImage.src = imageLinks[linkIndex];
-  }, 5000);
+    setInterval(function() {
+      if (linkIndex === 3) {
+        linkIndex = 0;
+      } else {
+        linkIndex = linkIndex + 1;
+      }
+      eyeImage.src = imageLinks[linkIndex];
+    }, 5000);
+  }
 }
 
 function displayNextQuote() {

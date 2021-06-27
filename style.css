@@ -242,6 +242,7 @@ h3 {
   html {
     font-size: 32px;
   }
+  
   .nav-container-hamburger {
     display: none;
     flex-direction: column;

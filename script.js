@@ -8,11 +8,11 @@ let attributionParagraph = document.getElementById('attributionParagraph');
 let hamburgerBtn = document.getElementById('button');
 let hamburgerNav = document.getElementById('hamburger-nav');
 let overlayShowing = true;
+let button = document.getElementById('button');
 let hamburgerIcon = document.getElementById('hamburger-icon');
 
 rotateEyeButtonImages();
 displayNextQuote();
-console.log('test');
 toggleNav();
 
 setInterval(function () {
@@ -139,11 +139,12 @@ function displayOverlayAndHamburgerNav() {
   overlay.style.display = 'block';
   hamburgerNav.style.fontSize = '1.2rem';
   hamburgerNav.style.display = 'flex';
-  //hamburgerIcon.src = 'https://i.ibb.co/VQ6f3DL/streamline-icon-interface-delete-1-1000x1000.png';
+  hamburgerIcon.src = 'https://i.ibb.co/VQ6f3DL/streamline-icon-interface-delete-1-1000x1000.png';
 }
 
 function hideOverlayandHamburgerNav() {
   overlay.style.display = 'none';
   hamburgerNav.style.display = 'none';
-  //hamburgerIcon.src = 'https://i.ibb.co/6RHMHfH/streamline-icon-interface-setting-menu-1-1000x1000.png';
+  console.log('test'); // TODO THIS COMMIT: remove this
+  hamburgerIcon.src = 'https://i.ibb.co/6RHMHfH/streamline-icon-interface-setting-menu-1-1000x1000.png';
 }

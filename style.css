@@ -17,10 +17,6 @@ body {
   display: none;
 }
 
-#overlay {
-  display: none;
-}
-
 header {
   margin-top: 35px;
   display: flex;
@@ -35,6 +31,7 @@ main {
    margin: 10px;
    background-position: center;
    background-repeat: no-repeat;
+   cursor: pointer;
 }
 
 section {
@@ -59,6 +56,7 @@ section {
   margin: 0px 10px 0px 10px;
   padding: 0px;
   line-height: 1.2;
+  cursor: pointer;
 }
 
 .nav-item-visible {
@@ -67,10 +65,12 @@ section {
   text-decoration: none;
   margin: 0px 10px 0px 10px;
   line-height: 1;
+  cursor: pointer;
 }
 
 .nav-item:hover {
   font-weight: 600;
+  cursor: pointer;
 }
 
 .small-logo {
@@ -201,9 +201,14 @@ h3 {
   display: flex;
 }
 
-.social-image {
+.social-image-insta {
   width: 35px;
   padding: 5px;
+}
+
+.social-image-linkedin {
+  width: 34px;
+  padding: 5.33px 5px 5px 5px;
 }
 
 .contact-info-container {
@@ -239,27 +244,30 @@ h3 {
 
 @media screen and (max-width: 930px) {
 
-  html {
-    font-size: 32px;
+  p,
+  h4 {
+    max-width: 340px;
+    line-height: 1.2;
   }
-  
+
   .nav-container-hamburger {
     display: none;
     flex-direction: column;
     justify-content: flex-start;
     position: absolute;
-    top: 48px;
-    left: 130px;
+    top: 155px;
+    left: 90px;
     z-index: 2;
   }
 
   .hamburger-icon {
     display: block;
     position: absolute;
-    left: 50px;
+    left: 30px;
     top: 66px;
     z-index: 2;
     width: 30px;
+    cursor: pointer;
   }
 
   #button {
@@ -281,7 +289,7 @@ h3 {
   }
 
   section {
-    margin-left: 0px;
+    margin-left: 10px;
   }
 
   main {
@@ -290,8 +298,8 @@ h3 {
   }
 
   .small-logo {
-    margin: 30px 0px 30px 0px;
-    width: 220px;
+    margin: 30px 6px 30px 0px;
+    width: 180px;
   }
 
   .nav-item {
@@ -299,4 +307,14 @@ h3 {
   }
   .nav-item-visible {
     line-height: 2;
+  }
+
+  .img-eyes {
+    max-width: 340px;
+  }
+
+  .text-container {
+    display: flex;
+    justify-content: center;
+     flex-direction: column;
   }

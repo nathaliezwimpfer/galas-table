@@ -23,10 +23,10 @@ setInterval(function () {
 
 function rotateEyeButtonImages() {
   const imageLinks = [
-    'https://i.ibb.co/5MQTX81/Eye1.png',
-    'https://i.ibb.co/VLDLLh6/Eye2.png',
-    'https://i.ibb.co/hdQF94W/Eye3.png',
-    'https://i.ibb.co/vPvW3tK/Eye4.png',
+    'https://i.ibb.co/Gv6TdB9/newEyes1.png',
+    'https://i.ibb.co/rML9ywX/newEyes2.png',
+    'https://i.ibb.co/8XNjKFT/newEyes3.png',
+    'https://i.ibb.co/86g3kQh/newEyes4.png',
   ];
   let eyeImage = document.getElementById('eye-image');
   let linkIndex = 0;

@@ -98,8 +98,10 @@ section {
   border: none;
   padding: 0px;
   margin: 0 auto;
+  background: transparent;
 
 }
+
 #eye-button-no-click {
   width: 80px;
   border: none;
@@ -318,6 +320,9 @@ a {
   .eye-button-container {
     margin-top: 30px !important;
     margin-bottom: 50px;
+    position: fixed;
+    bottom: 7px;
+    right: 10%;
   }
 
   .img-eyes {

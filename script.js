@@ -151,3 +151,8 @@ function hideOverlayandHamburgerNav() {
   hamburgerNav.style.display = 'none';
   hamburgerIcon.src = 'https://i.ibb.co/6RHMHfH/streamline-icon-interface-setting-menu-1-1000x1000.png';
 }
+
+//Password pop-up
+// when you click on window then make password validation form pop up
+// if you enter the correct password then you can navigate to the rest of the website
+// if you enter the incorrect password then an error message appears

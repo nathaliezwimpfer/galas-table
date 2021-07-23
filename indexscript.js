@@ -1,4 +1,4 @@
-/*let square = document.getElementById('main');
+let square = document.getElementById('main');
 let link = document.getElementById('link');
 
 square.addEventListener('click', function() {
@@ -13,6 +13,8 @@ square.addEventListener('click', function() {
       link.href = './index.html';
     }
 })
+
+/*
 
 
 square.addEventListener('click', function() {

@@ -251,9 +251,14 @@ a {
 
 @media screen and (max-width: 1300px) {
 
-  p,
+  p {
+    max-width: 640px;
+    line-height: 1.2;
+  }
+
   h4 {
     max-width: 640px;
+    font-size: 1rem;
     line-height: 1.2;
   }
 
@@ -271,7 +276,7 @@ a {
     display: block;
     position: absolute;
     left: 30px;
-    top: 30px;
+    top: 67px;
     z-index: 2;
     width: 60px;
     cursor: pointer;
@@ -305,7 +310,7 @@ a {
   }
 
   .small-logo {
-    margin: 80px 6px 80px 0px;
+    margin: 40px 40px 40px 0px;
     width: 300px;
   }
 
@@ -325,11 +330,11 @@ a {
   }
 
   #eye-image {
-    width: 120px;
+    width: 100px;
   }
 
   .img-eyes {
-    max-width: 340px;
+    max-width: 450px;
   }
 
   .text-container {
@@ -343,7 +348,7 @@ a {
   }
 
   html {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .blank-div {
